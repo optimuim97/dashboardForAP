@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreatePostsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.x
      *
      * @return void
      */
@@ -15,18 +15,18 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->bigInteger('entity_id');
+            $table->integer('user_id')->nullable();
+            $table->bigInteger('entity_id')->nullable();
             $table->string('body');
-            $table->string('publisher_name');
-            $table->string('publisher_id');
-            $table->string('cover');
+            $table->string('publisher_name')->nullable();
+            $table->string('publisher_id')->nullable();
+            $table->string('cover')->nullable();
             $table->string('image')->nullable();
-            $table->boolean('is_publish');
-            $table->boolean('is_visible_by_user');
-            $table->boolean('is_visible_by_agent');
-            $table->boolean('is_draft');
-            $table->date('expiration_date');
+            $table->boolean('is_publish')->nullable();
+            $table->boolean('is_visible_by_user')->nullable();
+            $table->boolean('is_visible_by_agent')->nullable();
+            $table->boolean('is_draft')->nullable();
+            $table->dateTime('expiration_date')->nullable();
             $table->timestamps();
         });
     }

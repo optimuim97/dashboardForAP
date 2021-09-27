@@ -46,4 +46,15 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::post('/posts/{id}/likes', [LikeController::class, 'likeOrUnlike']); // like or dislike back a post
 });
 
-Route::resource('agents', App\Http\Controllers\API\AgentAPIController::class);
+// Route::resource('agents', App\Http\Controllers\API\AgentAPIController::class);
+
+// Route::resource('entities', App\Http\Controllers\API\EntityAPIController::class);
+
+
+// Route::resource('entity_types', App\Http\Controllers\API\EntityTypeAPIController::class);
+
+
+// Route::resource('products', App\Http\Controllers\API\ProductAPIController::class);
+
+
+// Route::resource('posts', App\Http\Controllers\API\PostAPIController::class);

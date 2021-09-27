@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+    // return view('welcome');
 });
 
 Auth::routes();
@@ -24,3 +25,17 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
+
+
+
+Route::resource('entities', App\Http\Controllers\EntityController::class);
+
+
+Route::resource('entityTypes', App\Http\Controllers\EntityTypeController::class);
+
+
+Route::resource('products', App\Http\Controllers\ProductController::class);
+
+
+Route::resource('posts', App\Http\Controllers\PostController::class);
